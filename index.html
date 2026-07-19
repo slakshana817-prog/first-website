@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Design Your Future</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a', // Slate 900
+                        secondary: '#3b82f6', // Blue 500
+                        accent: '#10b981', // Emerald 500
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 w-full bg-primary/90 backdrop-blur-md text-white z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-wider text-secondary">PORTFOLIO.</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#about" class="hover:text-secondary transition-colors">About</a>
+                <a href="#skills" class="hover:text-secondary transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-secondary transition-colors">Projects</a>
+                <a href="#achievements" class="hover:text-secondary transition-colors">Achievements</a>
+                <a href="#contact" class="hover:text-secondary transition-colors">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-slate-700 px-4 py-4 space-y-3">
+            <a href="#about" class="block hover:text-secondary transition-colors">About</a>
+            <a href="#skills" class="block hover:text-secondary transition-colors">Skills</a>
+            <a href="#projects" class="block hover:text-secondary transition-colors">Projects</a>
+            <a href="#achievements" class="block hover:text-secondary transition-colors">Achievements</a>
+            <a href="#contact" class="block hover:text-secondary transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Intro) -->
+    <header class="pt-32 pb-20 bg-gradient-to-br from-primary via-slate-900 to-slate-800 text-white text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">
+                Design Your <span class="text-secondary">Future</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+                Welcome to my digital space. I am an aspiring engineer passionate about building clean, efficient, and impactful web solutions.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#projects" class="bg-secondary hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition-all transform hover:-translate-y-1">View Projects</a>
+                <a href="#contact" class="border border-slate-400 hover:border-white hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-lg transition-all">Let's Talk</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-20 max-w-5xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-primary">About Me</h2>
+            <div class="h-1 w-16 bg-secondary mx-auto mt-2 rounded"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 items-center">
+            <div class="md:col-span-1 text-center">
+                <!-- Avatar/Profile Icon Placeholder -->
+                <div class="w-48 h-48 bg-slate-200 border-4 border-secondary rounded-full flex items-center justify-center mx-auto text-slate-400 text-6xl shadow-inner">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                </div>
+            </div>
+            <div class="md:col-span-2 text-center md:text-left space-y-4">
+                <p class="text-lg leading-relaxed text-slate-600">
+                    Hello! I'm a tech student and frontend creator focused on building platforms that look great and work perfectly. I enjoy taking complex layout problems and turning them into beautiful, responsive web experiences.
+                </p>
+                <p class="text-slate-600">
+                    My core goal is to continually learn new frontend architectures and practice robust clean code paradigms while building useful systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20 bg-slate-100">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary">Technical Skills</h2>
+                <div class="h-1 w-16 bg-secondary mx-auto mt-2 rounded"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fa-brands fa-html5 text-orange-500 text-4xl mb-3"></i>
+                    <h3 class="font-semibold text-slate-700">HTML5</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fa-brands fa-css3-alt text-blue-500 text-4xl mb-3"></i>
+                    <h3 class="font-semibold text-slate-700">CSS3 / Tailwind</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fa-brands fa-js text-yellow-500 text-4xl mb-3"></i>
+                    <h3 class="font-semibold text-slate-700">JavaScript</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <i class="fa-brands fa-git-alt text-red-500 text-4xl mb-3"></i>
+                    <h3 class="font-semibold text-slate-700">Git & GitHub</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-20 max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-primary">Featured Projects</h2>
+            <div class="h-1 w-16 bg-secondary mx-auto mt-2 rounded"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-white border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group">
+                <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-8 text-white h-48 flex flex-col justify-end">
+                    <i class="fa-solid fa-hotel text-4xl mb-auto opacity-40"></i>
+                    <h3 class="text-2xl font-bold">Hotel Reservation System</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-slate-600 mb-4">A lightweight, console-driven execution module designed in C for optimized ticket and room allocation logic.</p>
+                    <div class="flex gap-2">
+                        <span class="bg-slate-100 px-3 py-1 rounded text-sm font-medium text-slate-600">C Language</span>
+                        <span class="bg-slate-100 px-3 py-1 rounded text-sm font-medium text-slate-600">File IO</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="bg-white border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group">
+                <div class="bg-gradient-to-r from-emerald-600 to-teal-700 p-8 text-white h-48 flex flex-col justify-end">
+                    <i class="fa-solid fa-book-bookmark text-4xl mb-auto opacity-40"></i>
+                    <h3 class="text-2xl font-bold">Library Record Management</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-slate-600 mb-4">A structured data storage utility managing records, asset issuance, and book track inventories efficiently.</p>
+                    <div class="flex gap-2">
+                        <span class="bg-slate-100 px-3 py-1 rounded text-sm font-medium text-slate-600">C Handling</span>
+                        <span class="bg-slate-100 px-3 py-1 rounded text-sm font-medium text-slate-600">Algorithms</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS & CERTIFICATIONS SECTION -->
+    <section id="achievements" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Certifications & Achievements</h2>
+                <div class="h-1 w-16 bg-accent mx-auto mt-2 rounded"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Cert 1 -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 flex gap-4 items-start">
+                    <div class="text-accent text-3xl"><i class="fa-solid fa-award"></i></div>
+                    <div>
+                        <h4 class="text-lg font-bold">Microsoft Learn Ambassador Participant</h4>
+                        <p class="text-slate-400 text-sm">Portfolio Hackathon Web Deployment Track</p>
+                    </div>
+                </div>
+                <!-- Cert 2 -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 flex gap-4 items-start">
+                    <div class="text-accent text-3xl"><i class="fa-solid fa-certificate"></i></div>
+                    <div>
+                        <h4 class="text-lg font-bold">Responsive Web Architecture Badge</h4>
+                        <p class="text-slate-400 text-sm">Advanced Frontend Components & UI/UX Strategy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 max-w-xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-primary">Get In Touch</h2>
+            <div class="h-1 w-16 bg-secondary mx-auto mt-2 rounded"></div>
+        </div>
+        <form class="space-y-4 bg-white p-8 rounded-xl border shadow-sm" onsubmit="event.preventDefault(); alert('Message simulation sent successfully!');">
+            <div>
+                <label class="block text-sm font-semibold text-slate-600 mb-1">Name</label>
+                <input type="text" required class="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-slate-600 mb-1">Email</label>
+                <input type="email" required class="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-slate-600 mb-1">Message</label>
+                <textarea rows="4" required class="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-primary hover:bg-slate-800 text-white font-bold py-3 rounded-lg transition-colors">
+                Send Message
+            </button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+        <p>&copy; 2026 Personal Portfolio. All rights reserved.</p>
+        <p class="mt-2 text-slate-500">Built with HTML & Tailwind CSS for MLSA Communities Showcase.</p>
+    </footer>
+
+    <!-- INTERACTIVE MENU JAVASCRIPT -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close dropdown when a link is clicked
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
